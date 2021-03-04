@@ -10,63 +10,90 @@ digraph {
         fontname  = "Monospace"
         fontsize  = 10
         fixedsize = shape
-        width     = 0.2
-        shape     = circle
+        width     = 1.5
+        shape     = rectangle
         style     = "rounded, filled"
     ]
 
     a [
         label = <
             <table border="0" cellborder="0" cellspacing="0">
-            <tr><td align="left"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Place Order&nbsp;</b></td></tr>
+            <tr>
+                <td align="center" width="15"><b>a</b></td>
+                <td align="left" balign="left" width="80">Place Order</td>
+            </tr>
             </table>
         >]
     b [
         label = <
             <table border="0" cellborder="0" cellspacing="0">
-            <tr><td align="left"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pay&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></td></tr>
+            <tr>
+                <td align="center" width="15"><b>b</b></td>
+                <td align="left" balign="left" width="80">Payment</td>
+            </tr>
             </table>
         >]
     c [
         label = <
             <table border="0" cellborder="0" cellspacing="0">
-            <tr><td align="left"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fry fish&nbsp;&nbsp;&nbsp;&nbsp;</b></td></tr>
+            <tr>
+                <td align="center" width="15"><b>c</b></td>
+                <td align="left" balign="left" width="80">Fry fish</td>
+            </tr>
             </table>
         >]
     d [
         label = <
             <table border="0" cellborder="0" cellspacing="0">
-            <tr><td align="left"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fry chips&nbsp;&nbsp;&nbsp;</b></td></tr>
+            <tr>
+                <td align="center" width="15"><b>d</b></td>
+                <td align="left" balign="left" width="80">Fry chips</td>
+            </tr>
             </table>
         >]
     e [
         label = <
             <table border="0" cellborder="0" cellspacing="0">
-            <tr><td align="left"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get drink&nbsp;&nbsp;&nbsp;</b></td></tr>
+            <tr>
+                <td align="center" width="15"><b>e</b></td>
+                <td align="left" balign="left" width="80">Get drink</td>
+            </tr>
             </table>
         >]
     f [
         label = <
             <table border="0" cellborder="0" cellspacing="0">
-            <tr><td align="left"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pack meal&nbsp;&nbsp;&nbsp;</b></td></tr>
+            <tr>
+                <td align="center" width="15"><b>f</b></td>
+                <td align="left" balign="left" width="80">Pack meal</td>
+            </tr>
             </table>
         >]
     g [
         label = <
             <table border="0" cellborder="0" cellspacing="0">
-            <tr><td align="left"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pick up food</b></td></tr>
+            <tr>
+                <td align="center" width="15"><b>g</b></td>
+                <td align="left" balign="left" width="80">Pick up food</td>
+            </tr>
             </table>
         >]
     h [
         label = <
             <table border="0" cellborder="0" cellspacing="0">
-            <tr><td align="left"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deliver food</b></td></tr>
+            <tr>
+                <td align="center" width="15"><b>h</b></td>
+                <td align="left" balign="left" width="80">Deliver food</td>
+            </tr>
             </table>
         >]
     i [
         label = <
             <table border="0" cellborder="0" cellspacing="0">
-            <tr><td align="left"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Eat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></td></tr>
+            <tr>
+                <td align="center" width="15"><b>i</b></td>
+                <td align="left" balign="left" width="80">Eat</td>
+            </tr>
             </table>
         >]
 
