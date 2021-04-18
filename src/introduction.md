@@ -2,7 +2,7 @@
 
 Using software to automate deployment is common practice. Writing user friendly automation is less so.
 
-This book explores common issues for automated tooling, and describes one design to make such tooling user friendly.
+This book explores common issues for automated tooling, and describes different dimensions that influence the user friendliness of software.
 
 ---
 

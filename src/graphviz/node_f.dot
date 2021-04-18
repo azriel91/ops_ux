@@ -1,0 +1,4 @@
+f_text [style = "plain", label = <<font point-size="25">📫</font> Allocate domain>]
+f [fontcolor = "black", style = "filled", shape = "circle", label = <<b>f</b>>]
+
+{ rank = same; f; f_text; }

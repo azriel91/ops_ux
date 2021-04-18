@@ -1,0 +1,4 @@
+h_text [style = "plain", label = <<font point-size="25">📣</font> Notify completion>]
+h [fontcolor = "black", style = "filled", shape = "circle", label = <<b>h</b>>]
+
+{ rank = same; h; h_text; }

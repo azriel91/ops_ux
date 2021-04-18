@@ -10,9 +10,9 @@ You roughly know where things are up to.
 digraph {
     {{#include workflow_nodes_with_labels.dot}}
 
-    a [color = "#55dd77", fillcolor = "#77ff99"]
-    b [color = "#55dd77", fillcolor = "#77ff99"]
-    c [color = "#55dd77", fillcolor = "#77ff99"]
+    a [{{#include graphviz/node_style_green.dot}}]
+    b [{{#include graphviz/node_style_green.dot}}]
+    c [{{#include graphviz/node_style_green.dot}}]
     d [color = "#6688ee", fillcolor = "#99ddff"]
     e_text [label = ".."]
     e [label = <<b>?</b>>, color = "#333355", fillcolor = "#aaaacc"]
@@ -52,9 +52,9 @@ digraph {
 digraph {
     {{#include workflow_nodes_with_labels.dot}}
 
-    a [color = "#55dd77", fillcolor = "#77ff99"]
-    b [color = "#55dd77", fillcolor = "#77ff99"]
-    c [color = "#55dd77", fillcolor = "#77ff99"]
+    a [{{#include graphviz/node_style_green.dot}}]
+    b [{{#include graphviz/node_style_green.dot}}]
+    c [{{#include graphviz/node_style_green.dot}}]
     d [color = "#dd7755", fillcolor = "#ff9977"]
     e [style = "invis"]
     e_text [style = "invis"]

@@ -1,6 +1,6 @@
 # Workflow Scenario
 
-Imagine I'm your friend, and you ask me to prepare dinner.
+Consider the deployment steps for a standalone web application backed by a database.
 
 The following steps represents this workflow:
 

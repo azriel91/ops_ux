@@ -1,78 +1,33 @@
-graph [
-    penwidth  = 0
-    nodesep   = 0.1
-    ranksep   = 0.3
-    bgcolor   = "transparent"
-    fontcolor = "#333333"
-]
-node [
-    fontcolor = "#333333"
-    fontname  = "Monospace"
-    fontsize  = 10
-    shape     = "plain"
-    width     = 0.04
-    margin    = 0.04
-    color     = "#aaaabb"
-    fillcolor = "#eeeef5"
-]
-edge [
-    arrowsize = 0.7
-    color     = "#333333"
-    fontcolor = "#333333"
-]
+{{#include graphviz/graph_settings.dot}}
 
 subgraph cluster_a {
-    a_text [style = "plain", label = <<font point-size="25">💸</font> Go shopping>]
-    a [fontcolor = "black", style = "filled", shape = "circle", label = <<b>a</b>>]
-
-    { rank = same; a; a_text; }
+    {{#include graphviz/node_a.dot}}
 }
 
 subgraph cluster_b {
-    b_text [style = "plain", label = <<font point-size="25">🍚</font> Cook rice>]
-    b [fontcolor = "black", style = "filled", shape = "circle", label = <<b>b</b>>]
-
-    { rank = same; b; b_text; }
+    {{#include graphviz/node_b.dot}}
 }
 
 subgraph cluster_c {
-    c_text [style = "plain", label = <<font point-size="25">🥩</font> Chop meat>]
-    c [fontcolor = "black", style = "filled", shape = "circle", label = <<b>c</b>>]
-
-    { rank = same; c; c_text; }
+    {{#include graphviz/node_c.dot}}
 }
 
 subgraph cluster_d {
-    d_text [style = "plain", label = <<font point-size="25">🍲</font> Cook meat>]
-    d [fontcolor = "black", style = "filled", shape = "circle", label = <<b>d</b>>]
-
-    { rank = same; d; d_text; }
+    {{#include graphviz/node_d.dot}}
 }
 
 subgraph cluster_e {
-    e_text [style = "plain", label = <<font point-size="25">🍽️</font> Set table>]
-    e [fontcolor = "black", style = "filled", shape = "circle", label = <<b>e</b>>]
-
-    { rank = same; e; e_text; }
+    {{#include graphviz/node_e.dot}}
 }
 
 subgraph cluster_f {
-    f_text [style = "plain", label = <<font point-size="25">🧃</font> Get drink>]
-    f [fontcolor = "black", style = "filled", shape = "circle", label = <<b>f</b>>]
-
-    { rank = same; f; f_text; }
+    {{#include graphviz/node_f.dot}}
 }
 
 subgraph cluster_g {
-    g_text [style = "plain", label = <<font point-size="25">🍛</font> Eat>]
-    g [fontcolor = "black", style = "filled", shape = "circle", label = <<b>g</b>>]
-
-    { rank = same; g; g_text; }
+    {{#include graphviz/node_g.dot}}
 }
 
 subgraph cluster_h {
-    h_text [style = "plain", label = <<font point-size="25">🧼</font> Wash dishes>]
-    h [fontcolor = "black", style = "filled", shape = "circle", label = <<b>h</b>>]
-
-    { rank = same; h; h_text; }
+    {{#include graphviz/node_h.dot}}
 }
