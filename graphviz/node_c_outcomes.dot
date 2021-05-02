@@ -1,0 +1,19 @@
+node [{{#include node_label_shape.dot}}]
+
+{
+    node [{{#include node_style_red.dot}}]
+    c_error_0 [label = <<b>❌ DNS Resolve Fail</b>>];
+    c_error_1 [label = <<b>❌ TCP Connect Fail</b>>];
+    c_error_2 [label = <<b>❌ Not Authorized</b>>];
+    c_error_3 [label = <<b>❌ Remote File Non-Existent</b>>];
+    c_error_4 [label = <<b>❌ Disconnected during download</b>>];
+    c_error_5 [label = <<b>❌ Insufficient Disk Space</b>>];
+}
+{
+    node [{{#include node_style_yellow.dot}}]
+    c_warn_0 [label = <<b>⚠️ Local File Exists</b>>];
+}
+{
+    node [{{#include node_style_green.dot}}]
+    c_success_0 [label = <<b>✅ Downloaded</b>>];
+}

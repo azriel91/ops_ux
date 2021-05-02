@@ -1,0 +1,4 @@
+c_text [shape = "plain", label = <<font point-size="25">📥</font>&nbsp; Download App>]
+c [fontcolor = "black", style = "filled", shape = "circle", label = <<b>c</b>>]
+
+{ rank = same; c; c_text; }

@@ -1,0 +1,19 @@
+node [{{#include node_label_shape.dot}}]
+
+{
+    node [{{#include node_style_red.dot}}]
+    b_error_0 [label = <<b>❌ DNS Resolve Fail</b>>];
+    b_error_1 [label = <<b>❌ TCP Connect Fail</b>>];
+    b_error_2 [label = <<b>❌ Credentials Invalid</b>>];
+    b_error_3 [label = <<b>❌ Insufficient Privileges</b>>];
+    b_error_4 [label = <<b>❌ Invalid Character in DB Name</b>>];
+}
+{
+    node [{{#include node_style_yellow.dot}}]
+    b_warn_0 [label = <<b>⚠️ Remote DB Exists</b>>];
+}
+{
+    node [{{#include node_style_green.dot}}]
+    b_success_0 [label = <<b>✅ DB Created</b>>];
+    b_success_1 [label = <<b>✅ Shared DB Reused</b>>];
+}

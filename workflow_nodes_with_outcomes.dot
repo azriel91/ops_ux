@@ -1,0 +1,55 @@
+{{#include graphviz/graph_settings.dot}}
+
+subgraph cluster_a {
+    {{#include graphviz/node_a.dot}}
+    {{#include graphviz/node_a_outcomes.dot}}
+
+    a -> a_error_0;
+    a -> a_error_1;
+    a -> a_error_2;
+    a -> a_error_3;
+    a -> a_error_4;
+    a -> a_error_5;
+    a -> a_warn_0;
+    a -> a_success_0;
+}
+
+subgraph cluster_b {
+    {{#include graphviz/node_b.dot}}
+    {{#include graphviz/node_b_outcomes.dot}}
+
+    b -> b_error_0;
+    b -> b_error_1;
+    b -> b_error_2;
+    b -> b_error_3;
+    b -> b_error_4;
+    b -> b_warn_0;
+    b -> b_success_0;
+    b -> b_success_1;
+}
+
+subgraph cluster_c {
+    {{#include graphviz/node_c.dot}}
+    {{#include graphviz/node_c_outcomes.dot}}
+
+    c -> c_error_0;
+    c -> c_error_1;
+    c -> c_error_2;
+    c -> c_error_3;
+    c -> c_error_4;
+    c -> c_error_5;
+    c -> c_warn_0;
+    c -> c_success_0;
+}
+
+subgraph cluster_d {
+    d [fontcolor = "black", style = "filled", shape = "circle", label = <<b>..</b>>]
+}
+
+a_warn_0 -> b [style = "dashed"];
+a_success_0 -> b;
+b_warn_0 -> c [style = "dashed"];
+b_success_0 -> c;
+b_success_1 -> c;
+c_warn_0 -> d [style = "dashed"];
+c_success_0 -> d;

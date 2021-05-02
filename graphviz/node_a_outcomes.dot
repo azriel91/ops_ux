@@ -1,0 +1,19 @@
+node [{{#include node_label_shape.dot}}]
+
+{
+    node [{{#include node_style_red.dot}}]
+    a_error_0 [label = <<b>❌ DNS Resolve Fail</b>>];
+    a_error_1 [label = <<b>❌ TCP Connect Fail</b>>];
+    a_error_2 [label = <<b>❌ Not Authorized</b>>];
+    a_error_3 [label = <<b>❌ Local File Non-Existent</b>>];
+    a_error_4 [label = <<b>❌ Disconnected during upload</b>>];
+    a_error_5 [label = <<b>❌ Insufficient Disk Space</b>>];
+}
+{
+    node [{{#include node_style_yellow.dot}}]
+    a_warn_0 [label = <<b>⚠️ Remote File Exists</b>>];
+}
+{
+    node [{{#include node_style_green.dot}}]
+    a_success_0 [label = <<b>✅ Uploaded</b>>];
+}

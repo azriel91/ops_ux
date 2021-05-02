@@ -1,0 +1,33 @@
+{{#include graphviz/graph_settings.dot}}
+
+subgraph cluster_a {
+    {{#include graphviz/node_a.dot}}
+}
+
+subgraph cluster_b {
+    {{#include graphviz/node_b.dot}}
+}
+
+subgraph cluster_c {
+    {{#include graphviz/node_c.dot}}
+}
+
+subgraph cluster_d {
+    {{#include graphviz/node_d.dot}}
+}
+
+subgraph cluster_e {
+    {{#include graphviz/node_e.dot}}
+}
+
+subgraph cluster_f {
+    {{#include graphviz/node_f.dot}}
+}
+
+subgraph cluster_g {
+    {{#include graphviz/node_g.dot}}
+}
+
+subgraph cluster_h {
+    {{#include graphviz/node_h.dot}}
+}
