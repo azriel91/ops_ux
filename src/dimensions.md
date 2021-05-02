@@ -12,7 +12,7 @@ Dimensions can be independent; some dimensions may be derived from or are influe
 
 We will look at the following dimensions.
 
-1. **Path Handling:** How exhaustive code path coverage is.
+1. **Path Handling:** How exhaustive code path coverage is, and how each path is handled.
 2. **State Visibility:** What state is it in now, progress tracking.
 3. **Understandability:** Presentation / verbosity.
 4. **Recoverability / Repeatability:** Can execution resume from halfway.

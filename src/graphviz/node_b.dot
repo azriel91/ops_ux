@@ -1,4 +1,4 @@
-b_text [style = "plain", label = <<font point-size="25">🛢️</font> Create DB>]
+b_text [shape = "plain", label = <<font point-size="25">🛢️</font>&nbsp; Create DB>]
 b [fontcolor = "black", style = "filled", shape = "circle", label = <<b>b</b>>]
 
 { rank = same; b; b_text; }

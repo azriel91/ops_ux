@@ -114,10 +114,11 @@ digraph {
 
 </div>
 </details>
+<br/>
 </div>
 </details>
 
-<details open>
+<details>
 <summary><b>Planner:</b> The steps to completion are known, and progress is shown.</summary>
 <div style="margin-left: 18px;">
 
@@ -125,7 +126,7 @@ digraph {
 digraph {
     {{#include workflow_nodes_with_labels.dot}}
 
-    a [{{#include graphviz/node_style_green.dot}}]
+    a [{{#include graphviz/node_style_yellow.dot}}]
     b [{{#include graphviz/node_style_green.dot}}]
     c [{{#include graphviz/node_style_green.dot}}]
     d [color = "#dd7755", fillcolor = "#ff9977"]
@@ -165,3 +166,10 @@ Also comes in the form of progress bars:
 
 </div>
 </details>
+
+## API Implications
+
+* Need overall execution plan steps.
+* Additional steps discovered at runtime are "sub-steps".
+* Duration elapsed is essential.
+* Accurate estimated duration remaining is nice, but difficult to provide.

@@ -1,6 +1,16 @@
 # Path Handling
 
-> How exhaustive code path coverage is.
+> How exhaustive code path coverage is, and how each path is handled.
+
+```dot process Workflow With Errors
+digraph {
+    rankdir = "LR";
+
+    {{#include workflow_nodes_with_outcomes.dot}}
+}
+```
+
+## Maturity Levels
 
 ```dot process Download App
 digraph {
@@ -10,8 +20,6 @@ digraph {
     c -> c_text [style = "invis"];
 }
 ```
-
-## Maturity Levels
 
 <details>
 <summary><b>Happy Path only</b></summary>
@@ -182,32 +190,17 @@ digraph {
 
     {{#include graphviz/graph_settings.dot}}
     {{#include graphviz/node_c.dot}}
-
-
-    {
-        node [{{#include graphviz/node_label_shape.dot}}]
-        c_success [label = <<b>✅ Downloaded</b>>, {{#include graphviz/node_style_green.dot}}];
-
-        {
-            node [{{#include graphviz/node_style_red.dot}}]
-            c_error_0 [label = <<b>❌ DNS Resolve Fail</b>>];
-            c_error_1 [label = <<b>❌ TCP Connect Fail</b>>];
-            c_error_2 [label = <<b>❌ Not Authorized</b>>];
-            c_error_2 [label = <<b>❌ Remote File Non-Existent</b>>];
-            c_error_3 [label = <<b>❌ Local File Exists</b>>];
-            c_error_4 [label = <<b>❌ Disconnected during download.</b>>];
-            c_error_5 [label = <<b>❌ Insufficient Disk Space.</b>>];
-        }
-    }
+    {{#include graphviz/node_c_outcomes.dot}}
 
     c -> c_text [style = "invis"];
-    c -> c_success;
     c -> c_error_0;
     c -> c_error_1;
     c -> c_error_2;
     c -> c_error_3;
     c -> c_error_4;
     c -> c_error_5;
+    c -> c_warn_0;
+    c -> c_success_0;
 }
 ```
 
@@ -270,6 +263,14 @@ fn app_download() -> Result<(), Error> {
 </div>
 </details>
 
+## API Implications
+
+* Any possible failing functions must return `Result`.
+* So, the return type of consumer-implemented functions must be type parameterized.
+* `choochoo` constrains users to provide [`srcerr:SourceError<E>`](https://github.com/azriel91/srcerr), which forces consumers to have:
+    - Strongly typed error codes.
+    - Provide the error information that [`codespan`](https://github.com/brendanzab/codespan) can consume.
+
 ## Importance
 
-Arguably the most important dimension for robustness -- ensuring that a system is not left in an unrecoverable state.
+Arguably the most important dimension for robustness &ndash; ensuring that a system is not left in an unrecoverable state.

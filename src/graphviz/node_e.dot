@@ -1,4 +1,4 @@
-e_text [style = "plain", label = <<font point-size="25">🔌</font> Link app to DB>]
+e_text [shape = "plain", label = <<font point-size="25">🔌</font>&nbsp; Link app to DB>]
 e [fontcolor = "black", style = "filled", shape = "circle", label = <<b>e</b>>]
 
 { rank = same; e; e_text; }
