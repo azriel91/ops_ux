@@ -70,11 +70,10 @@ Maybe you want to keep the failing environment around for investigation.
 
 ```dot process Recoverability
 digraph {
-    {{#include workflow_nodes_with_labels.dot}}
+    {{#include graphviz/graph_settings.dot}}
 
-    g [{{#include graphviz/node_style_green.dot}}]
-
-    a -> b -> c -> d -> e -> f -> g -> h;
+    {{#include graphviz/node_g.dot}}
+    {{#include graphviz/node_h.dot}}
 
     person [
         label = <<table border="0" cellpadding="1" cellspacing="0">
@@ -88,6 +87,19 @@ digraph {
         fontname = "Helvetica"
         labelloc = "t"
     ]
+
+    dotdot [
+        fontcolor = "black",
+        style = "filled",
+        shape = "circle",
+        label = <<b>..</b>>,
+        {{#include graphviz/node_style_green.dot}}
+    ]
+
+    g [{{#include graphviz/node_style_green.dot}}]
+    g -> g_text [style = "invis"];
+    dotdot -> g -> h;
+
     { rank = same; g; g_text; person; }
 }
 ```

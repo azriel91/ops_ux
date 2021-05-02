@@ -9,4 +9,10 @@
 - [Recoverability / Repeatability](./recoverability_repeatability.md)
 - [Performance / Efficiency](./performance_efficiency.md)
 - [Psychology](./psychology.md)
-- [Common Issues](./common_issues.md)
+- [Future](./future.md)
+- [QFC](./qfc.md)
+
+---
+
+[Links](./links.md)
+[Common Issues](./common_issues.md)
