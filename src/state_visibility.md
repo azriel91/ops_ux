@@ -20,7 +20,7 @@ digraph {
 
     a -> a_text [style = "invis"]
 
-    chef [
+    person [
         label = <<table border="0" cellpadding="1" cellspacing="0">
                 <tr>
                     <td rowspan = "3"><font point-size = "30">🧑</font></td>
@@ -32,7 +32,7 @@ digraph {
         fontname = "Helvetica"
         labelloc = "t"
     ]
-    {rank = same; a; a_text; chef;}
+    {rank = same; a; a_text; person;}
 }
 ```
 
@@ -60,7 +60,7 @@ digraph {
     a -> a_text [style = "invis"];
     a -> b -> c -> d;
 
-    chef [
+    person [
         label = <<table border="0" cellpadding="1" cellspacing="0">
                 <tr>
                     <td rowspan = "3"><font point-size = "30">🧑</font></td>
@@ -72,7 +72,7 @@ digraph {
         fontname = "Helvetica"
         labelloc = "t"
     ]
-    {rank = same; c; c_text; chef;}
+    {rank = same; c; c_text; person;}
 }
 ```
 
@@ -96,7 +96,7 @@ digraph {
     a -> a_text [style = "invis"];
     a -> b -> c -> d;
 
-    chef [
+    person [
         label = <<table border="0" cellpadding="1" cellspacing="0">
                 <tr>
                     <td rowspan = "3"><font point-size = "30">🧑</font></td>
@@ -108,7 +108,7 @@ digraph {
         fontname = "Helvetica"
         labelloc = "t"
     ]
-    {rank = same; d; d_text; chef;}
+    {rank = same; d; d_text; person;}
 }
 ```
 
@@ -133,7 +133,7 @@ digraph {
 
     a -> b -> c -> d -> e -> f -> g -> h;
 
-    chef [
+    person [
         label = <<table border="0" cellpadding="1" cellspacing="0">
                 <tr>
                     <td rowspan = "3"><font point-size = "30">🧑</font></td>
@@ -145,24 +145,9 @@ digraph {
         fontname = "Helvetica"
         labelloc = "t"
     ]
-    {rank = same; d; d_text; chef;}
+    {rank = same; d; d_text; person;}
 }
 ```
-
-
-Also comes in the form of progress bars:
-
-<div style="background-color: #111111; color: #ffffff; padding: 0px 5px 2px 5px; border-radius: 4px;">
-<pre class="terminal">
-<span style='color:#55f'><b>    </b></span><span style='color:#5f5'><b>     _   _ _   _</b></span>
-<span style='color:#55f'><b> ___ ___</b></span><span style='color:#5f5'><b>| |_|_| |_| |___</b></span>
-<span style='color:#55f'><b>| . |_ -</b></span><span style='color:#5f5'><b>|  _| |  _| | -_|</b></span>
-<span style='color:#55f'><b>|  _|___</b></span><span style='color:#5f5'><b>|_| |_|_| |_|___|</b></span>
-<span style='color:#55f'><b>|_|     </b></span><span style='color:#5f5'></span>
-<span style='color:#55f'></span><span style='color:#5f5'></span>
-<span style='color:#0a0'>⠒</span> [00:00:03] [<span style='color:#0aa'>████████████████████████████▒<span style='color:#00a'>░░░░░░░░░░░</span></span>] 36/50 (2s)
-</pre>
-</div>
 
 </div>
 </details>
@@ -171,5 +156,5 @@ Also comes in the form of progress bars:
 
 * Need overall execution plan steps.
 * Additional steps discovered at runtime are "sub-steps".
-* Duration elapsed is essential.
-* Accurate estimated duration remaining is nice, but difficult to provide.
+* Elapsed duration is essential.
+* Accurate estimated duration remaining is nice, but can be difficult to provide.

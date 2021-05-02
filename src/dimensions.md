@@ -16,7 +16,7 @@ We will look at the following dimensions.
 2. **State Visibility:** What state is it in now, progress tracking.
 3. **Understandability:** Presentation / verbosity.
 4. **Recoverability / Repeatability:** Can execution resume from halfway.
-5. **Performance / Efficiency:** How well is the execution scheduled, or resources used.
+5. **Performance / Efficiency:** How well is execution scheduled, time spent, and resources used.
 6. **Psychology:** Did the user request what they intended?
 
 For now, this book does not cover:

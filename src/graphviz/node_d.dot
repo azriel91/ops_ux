@@ -1,4 +1,4 @@
-d_text [shape = "plain", label = <<font point-size="25">💽</font>&nbsp; Run app>]
+d_text [shape = "plain", label = <<font point-size="25">🔌</font>&nbsp; Link app to DB>]
 d [fontcolor = "black", style = "filled", shape = "circle", label = <<b>d</b>>]
 
 { rank = same; d; d_text; }
