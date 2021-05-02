@@ -1,0 +1,35 @@
+on:
+  push:
+    branches:
+      - main
+
+name: Publish
+
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Setup mdbook
+        uses: peaceiris/actions-mdbook@v1
+        with: { mdbook-version: 'latest' }
+
+      - name: Setup Graphviz
+        uses: ts-graphviz/setup-graphviz@v1
+
+      - uses: actions-rs/install@v0.1
+        with:
+          crate: mdbook-graphviz
+          version: latest
+          use-tool-cache: true
+
+      - run: mdbook test
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./book
