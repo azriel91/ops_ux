@@ -20,11 +20,18 @@ jobs:
       - name: Setup Graphviz
         uses: ts-graphviz/setup-graphviz@v1
 
-      - uses: actions-rs/install@v0.1
+      - name: mdbook-graphviz Cache
+        id: mdbook_graphviz_cache
+        uses: actions/cache@v2
         with:
-          crate: mdbook-graphviz
-          version: latest
-          use-tool-cache: true
+          path: ~/.cargo/bin/mdbook-graphviz
+          key: ${{ runner.os }}-mdbook-graphviz
+
+      - uses: actions-rs/cargo@v1
+        if: steps.mdbook_graphviz_cache.outputs.cache-hit != 'true'
+        with:
+          command: install
+          args: mdbook-graphviz
 
       - run: mdbook build
 
