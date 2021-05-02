@@ -26,7 +26,7 @@ jobs:
           version: latest
           use-tool-cache: true
 
-      - run: mdbook test
+      - run: mdbook build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
