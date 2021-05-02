@@ -1,6 +1,6 @@
 # Operations UX
 
-Book introducing `choochoo` &ndash; a library that supports writing a deployment automation tool with good UX.
+Book introducing [`choochoo`] &ndash; a library that supports writing a deployment automation tool with good UX.
 
 * Online book: https://azriel.im/ops_ux/
 * Recording: *(coming)*
@@ -32,3 +32,5 @@ cargo install mdbook
 cargo install mdbook-graphviz
 mdbook serve
 ```
+
+[`choochoo`]: https://github.com/azriel91/choochoo
