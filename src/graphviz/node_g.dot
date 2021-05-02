@@ -1,4 +1,4 @@
-g_text [shape = "plain", label = <<font point-size="25">📪</font>&nbsp; Attach domain>]
+g_text [shape = "plain", label = <<font point-size="25">📪</font>&nbsp; Attach Domain>]
 g [fontcolor = "black", style = "filled", shape = "circle", label = <<b>g</b>>]
 
 { rank = same; g; g_text; }

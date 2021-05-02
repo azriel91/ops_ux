@@ -1,4 +1,4 @@
-a_text [shape = "plain", label = <<font point-size="25">📤</font>&nbsp; Upload app>]
+a_text [shape = "plain", label = <<font point-size="25">📤</font>&nbsp; Upload App>]
 a [fontcolor = "black", style = "filled", shape = "circle", label = <<b>a</b>>]
 
 { rank = same; a; a_text; }

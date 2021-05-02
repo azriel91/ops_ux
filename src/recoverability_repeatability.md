@@ -115,3 +115,29 @@ This means if we fail at 90% / 2 hours into the process, we can restart at that 
 * Requires a `visit_fn` ("do it" function).
 * `check_fn` is run if present, otherwise it always runs the `visit_fn`.
 * **Bonus:** The check function is run after the visit function to detect if the logic is correct.
+
+## Live Demo
+
+* Run it twice.
+* Replay last 2 steps.
+* Update the file.
+
+```bash
+time ./target/release/examples/demo
+```
+
+```bash
+rm -rf /tmp/choochoo/demo/station_{g,h}
+```
+
+* 514 KB, 1 second
+
+    ```bash
+    for i in {1..200000}; do printf "application contents $i"; done | gzip -f > app.zip
+    ```
+
+* 5 MB, 7 seconds
+
+    ```bash
+    for i in {1..2000000}; do printf "application contents $i"; done | gzip -f > app.zip
+    ```

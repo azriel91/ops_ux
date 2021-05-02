@@ -158,3 +158,9 @@ digraph {
 * Additional steps discovered at runtime are "sub-steps".
 * Elapsed duration is essential.
 * Accurate estimated duration remaining is nice, but can be difficult to provide.
+
+## Live Demo
+
+* All tasks are listed.
+* Each task has progress limit.
+* Colours for failure / success / in progress.

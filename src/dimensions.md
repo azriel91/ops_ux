@@ -1,16 +1,17 @@
 # Dimensions
 
-In the physical world, an object has different dimensions such as:
+In this book, a dimension is defined as a particular nature of something. Dimensions may be independent, and may be measurable. Some dimensions may be derived from and may be influenced by others.
 
-* Size &ndash; width, height, depth
+For example, an object's dimensions are:
+
+* Size
 * Mass
 * Temperature
 * Colour
-* Shape
 
-Dimensions can be independent; some dimensions may be derived from or are influenced by others.
+## Software Dimensions
 
-We will look at the following dimensions.
+We will look at the following software dimensions, and show how [`choochoo`] supports building software with higher maturity levels of user friendliness.
 
 1. **Path Handling:** How exhaustive code path coverage is, and how each path is handled.
 2. **State Visibility:** What state is it in now, progress tracking.
@@ -19,7 +20,4 @@ We will look at the following dimensions.
 5. **Performance / Efficiency:** How well is execution scheduled, time spent, and resources used.
 6. **Psychology:** Did the user request what they intended?
 
-For now, this book does not cover:
-
-* Code maintainability
-* Security
+[`choochoo`]: https://github.com/azriel91/choochoo

@@ -276,4 +276,42 @@ fn app_download() -> Result<(), Error> {
 
 ## Importance
 
-Arguably the most important dimension for robustness &ndash; ensuring that a system is not left in an unrecoverable state.
+Arguably the most important dimension for robustness &ndash; ensuring that a system is not left in an unknown / unrecoverable state.
+
+## Live Demo
+
+* Artifact server:
+
+    ```bash
+    mkdir /tmp/server && cd /tmp/server
+    ```
+
+    ```bash
+    simple-http-server --nocache -u --ip 127.0.0.1 --port 8000 -l 100000000
+    ```
+
+* Build agent:
+
+    ```bash
+    mkdir -p /tmp/choochoo/demo/station_a/ && cd /tmp/choochoo/demo/station_a/
+    ```
+
+    ```bash
+    for i in {1..200000}; do printf "application contents $i"; done | gzip -f > app.zip
+    ```
+
+    ```bash
+    rm -rf /tmp/choochoo/demo/station_{b,c,d,e,f,g,h} /tmp/server/app.zip
+    ```
+
+* `choochoo`:
+
+    ```bash
+    time ./target/release/examples/demo
+    ```
+
+Scenarios:
+
+* Happy Path.
+* Cannot connect to artifact server.
+* Stop server before downloading.
