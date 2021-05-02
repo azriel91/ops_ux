@@ -267,6 +267,7 @@ fn app_download() -> Result<(), Error> {
 
 * Any possible failing functions must return `Result`.
 * So, the return type of consumer-implemented functions must be type parameterized.
+* **Handle interrupts and stop gracefully.**
 * `choochoo` constrains users to provide [`srcerr:SourceError<E>`](https://github.com/azriel91/srcerr), which forces consumers to have:
     - Strongly typed error codes.
     - Provide the error information that [`codespan`](https://github.com/brendanzab/codespan) can consume.
