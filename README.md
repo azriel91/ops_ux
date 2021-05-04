@@ -3,7 +3,7 @@
 Book introducing [`choochoo`] &ndash; a library that supports writing a deployment automation tool with good UX.
 
 * Online book: https://azriel.im/ops_ux/
-* Recording: *(coming)*
+* Recording: https://youtu.be/TCizbi8_1vc
 
 ## Building Locally
 
