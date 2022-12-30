@@ -7,3 +7,4 @@ title = "Operations UX"
 
 [preprocessor.graphviz]
 command = "mdbook-graphviz"
+after = ["links"]
