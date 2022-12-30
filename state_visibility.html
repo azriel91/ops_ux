@@ -4,37 +4,24 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>State Visibility - Operations UX</title>
-        
-        
 
 
         <!-- Custom HTML head -->
         
-
-
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        
         <link rel="icon" href="favicon.svg">
-        
-        
         <link rel="shortcut icon" href="favicon.png">
-        
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
-        
         <link rel="stylesheet" href="css/print.css" media="print">
-        
 
         <!-- Fonts -->
         <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        
         <link rel="stylesheet" href="fonts/fonts.css">
-        
 
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="highlight.css">
@@ -42,19 +29,17 @@
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
-        
 
-        
     </head>
     <body>
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">
+        <script>
             var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script type="text/javascript">
+        <script>
             try {
                 var theme = localStorage.getItem('mdbook-theme');
                 var sidebar = localStorage.getItem('mdbook-sidebar');
@@ -70,7 +55,7 @@
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
-        <script type="text/javascript">
+        <script>
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
@@ -82,7 +67,7 @@
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
-        <script type="text/javascript">
+        <script>
             var html = document.querySelector('html');
             var sidebar = 'hidden';
             if (document.body.clientWidth >= 1080) {
@@ -103,8 +88,7 @@
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                
-                <div id="menu-bar-hover-placeholder"></div>
+                                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky bordered">
                     <div class="left-buttons">
                         <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
@@ -114,35 +98,30 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                         </ul>
-                        
                         <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                             <i class="fa fa-search"></i>
                         </button>
-                        
                     </div>
 
                     <h1 class="menu-title">Operations UX</h1>
 
                     <div class="right-buttons">
-                        
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
-                        
-                        
+
                     </div>
                 </div>
 
-                
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
                     </form>
                     <div id="searchresults-outer" class="searchresults-outer hidden">
                         <div id="searchresults-header" class="searchresults-header"></div>
@@ -150,10 +129,9 @@
                         </ul>
                     </div>
                 </div>
-                
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
+                <script>
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
@@ -172,17 +150,23 @@
 <details>
 <summary><b>Zero Visibility:</b> It's running vs it's not.</summary>
 <div style="margin-left: 18px;">
-<p><img src="state_visibility_progress_tracking_0.generated.svg" alt="" title="Progress Tracking" /></p>
+<div><!-- Generated by graphviz version 2.43.0 (0)
+ --><!-- Title: %3 Pages: 1 --><svg width="225pt" height="52pt"
+ viewBox="0.00 0.00 224.52 52.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 48)"><title>%3</title><!-- a_text --><g id="node1" class="node"><title>a_text</title><text text-anchor="middle" x="38.02" y="-19.5" font-family="Monospace" font-size="10.00" fill="#333333">..</text></g><!-- a --><g id="node2" class="node"><title>a</title><ellipse fill="#aaaacc" stroke="#333355" cx="12.02" cy="-22" rx="12.04" ry="12.04"/><text text-anchor="start" x="8.52" y="-20.5" font-family="Monospace" font-weight="bold" font-size="10.00">?</text></g><!-- a&#45;&gt;a_text --><!-- person --><g id="node3" class="node"><title>person</title><text text-anchor="start" x="53.02" y="-13.5" font-family="Helvetica,sans-Serif" font-size="30.00" fill="#333333">🧑</text><path fill="none" stroke="#333333" d="M98.02,-25C98.02,-25 211.02,-25 211.02,-25 214.02,-25 217.02,-28 217.02,-31 217.02,-31 217.02,-37 217.02,-37 217.02,-40 214.02,-43 211.02,-43 211.02,-43 98.02,-43 98.02,-43 95.02,-43 92.02,-40 92.02,-37 92.02,-37 92.02,-31 92.02,-31 92.02,-28 95.02,-25 98.02,-25"/><text text-anchor="start" x="94.02" y="-31.6" font-family="Helvetica,sans-Serif" font-style="italic" font-size="10.00" fill="#333333"></text><text text-anchor="start" x="98.02" y="-31.6" font-family="Helvetica,sans-Serif" font-style="italic" font-size="13.00" fill="#333333">M</text><text text-anchor="start" x="110.02" y="-31.6" font-family="Helvetica,sans-Serif" font-style="italic" font-size="11.00" fill="#333333">AYBE IT&#39;S FROZEN </text><text text-anchor="start" x="152.52" y="-16" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#333333"></text><text text-anchor="start" x="152.52" y="-3" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#333333"></text></g></g></svg></div>
 </div>
 </details>
 <details>
 <summary><b>Imperative:</b> You can see the completed steps, but not necessarily remaining steps.</summary>
 <div style="margin-left: 18px;">
-<p><img src="state_visibility_progress_tracking_1.generated.svg" alt="" title="Progress Tracking" /></p>
+<div><!-- Generated by graphviz version 2.43.0 (0)
+ --><!-- Title: %3 Pages: 1 --><svg width="280pt" height="198pt"
+ viewBox="0.00 0.00 280.02 198.04" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 194.04)"><title>%3</title><!-- a_text --><g id="node1" class="node"><title>a_text</title><text text-anchor="start" x="31.52" y="-171.04" font-family="Monospace" font-size="25.00" fill="#333333">📤</text><text text-anchor="start" x="63.52" y="-171.04" font-family="Monospace" font-size="10.00" fill="#333333">  Upload App</text></g><!-- a --><g id="node2" class="node"><title>a</title><ellipse fill="#77ff99" stroke="#55dd77" cx="12.02" cy="-176.04" rx="12.04" ry="12.04"/><text text-anchor="start" x="8.52" y="-174.54" font-family="Monospace" font-weight="bold" font-size="10.00">a</text></g><!-- a&#45;&gt;a_text --><!-- b --><g id="node4" class="node"><title>b</title><ellipse fill="#77ff99" stroke="#55dd77" cx="12.02" cy="-126.04" rx="12.04" ry="12.04"/><text text-anchor="start" x="8.52" y="-124.54" font-family="Monospace" font-weight="bold" font-size="10.00">b</text></g><!-- a&#45;&gt;b --><g id="edge2" class="edge"><title>a&#45;&gt;b</title><path fill="none" stroke="#333333" d="M12.02,-163.91C12.02,-158.34 12.02,-151.45 12.02,-145.14"/><polygon fill="#333333" stroke="#333333" points="14.47,-145.11 12.02,-138.11 9.57,-145.11 14.47,-145.11"/></g><!-- b_text --><g id="node3" class="node"><title>b_text</title><text text-anchor="start" x="31.52" y="-121.04" font-family="Monospace" font-size="25.00" fill="#333333">🛢️</text><text text-anchor="start" x="63.52" y="-121.04" font-family="Monospace" font-size="10.00" fill="#333333">  Create DB</text></g><!-- c --><g id="node6" class="node"><title>c</title><ellipse fill="#99ddff" stroke="#6688ee" cx="12.02" cy="-68.04" rx="12.04" ry="12.04"/><text text-anchor="start" x="8.52" y="-66.54" font-family="Monospace" font-weight="bold" font-size="10.00">c</text></g><!-- b&#45;&gt;c --><g id="edge3" class="edge"><title>b&#45;&gt;c</title><path fill="none" stroke="#333333" d="M12.02,-113.98C12.02,-106.38 12.02,-96.13 12.02,-87.33"/><polygon fill="#333333" stroke="#333333" points="14.47,-87.08 12.02,-80.08 9.57,-87.08 14.47,-87.08"/></g><!-- c_text --><g id="node5" class="node"><title>c_text</title><text text-anchor="start" x="31.52" y="-63.04" font-family="Monospace" font-size="25.00" fill="#333333">📥</text><text text-anchor="start" x="63.52" y="-63.04" font-family="Monospace" font-size="10.00" fill="#333333">  Download App</text></g><!-- d --><g id="node8" class="node"><title>d</title><ellipse fill="#aaaacc" stroke="#333355" cx="12.02" cy="-12.02" rx="12.04" ry="12.04"/><text text-anchor="start" x="8.52" y="-10.52" font-family="Monospace" font-weight="bold" font-size="10.00">?</text></g><!-- c&#45;&gt;d --><g id="edge4" class="edge"><title>c&#45;&gt;d</title><path fill="none" stroke="#333333" d="M12.02,-55.85C12.02,-48.75 12.02,-39.4 12.02,-31.25"/><polygon fill="#333333" stroke="#333333" points="14.47,-31.2 12.02,-24.2 9.57,-31.2 14.47,-31.2"/></g><!-- d_text --><g id="node7" class="node"><title>d_text</title><text text-anchor="middle" x="38.02" y="-9.52" font-family="Monospace" font-size="10.00" fill="#333333">..</text></g><!-- person --><g id="node9" class="node"><title>person</title><text text-anchor="start" x="157.02" y="-59.54" font-family="Helvetica,sans-Serif" font-size="30.00" fill="#333333">🧑</text><path fill="none" stroke="#333333" d="M202.02,-71.04C202.02,-71.04 266.02,-71.04 266.02,-71.04 269.02,-71.04 272.02,-74.04 272.02,-77.04 272.02,-77.04 272.02,-83.04 272.02,-83.04 272.02,-86.04 269.02,-89.04 266.02,-89.04 266.02,-89.04 202.02,-89.04 202.02,-89.04 199.02,-89.04 196.02,-86.04 196.02,-83.04 196.02,-83.04 196.02,-77.04 196.02,-77.04 196.02,-74.04 199.02,-71.04 202.02,-71.04"/><text text-anchor="start" x="198.02" y="-77.64" font-family="Helvetica,sans-Serif" font-style="italic" font-size="10.00" fill="#333333"></text><text text-anchor="start" x="202.02" y="-77.64" font-family="Helvetica,sans-Serif" font-style="italic" font-size="13.00" fill="#333333">N</text><text text-anchor="start" x="212.02" y="-77.64" font-family="Helvetica,sans-Serif" font-style="italic" font-size="11.00" fill="#333333">EXT NEXT </text><text text-anchor="start" x="232.02" y="-62.04" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#333333"></text><text text-anchor="start" x="232.02" y="-49.04" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#333333"></text></g></g></svg></div>
 <details>
 <summary>If it fails, you will be able to see how far it got.</summary>
 <div style="margin-left: 18px;">
-<p><img src="state_visibility_naive_workflow_failure_2.generated.svg" alt="" title="Naive Workflow Failure" /></p>
+<div><!-- Generated by graphviz version 2.43.0 (0)
+ --><!-- Title: %3 Pages: 1 --><svg width="262pt" height="202pt"
+ viewBox="0.00 0.00 262.02 202.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 198)"><title>%3</title><!-- a_text --><g id="node1" class="node"><title>a_text</title><text text-anchor="start" x="31.52" y="-175" font-family="Monospace" font-size="25.00" fill="#333333">📤</text><text text-anchor="start" x="63.52" y="-175" font-family="Monospace" font-size="10.00" fill="#333333">  Upload App</text></g><!-- a --><g id="node2" class="node"><title>a</title><ellipse fill="#77ff99" stroke="#55dd77" cx="12.02" cy="-180" rx="12.04" ry="12.04"/><text text-anchor="start" x="8.52" y="-178.5" font-family="Monospace" font-weight="bold" font-size="10.00">a</text></g><!-- a&#45;&gt;a_text --><!-- b --><g id="node4" class="node"><title>b</title><ellipse fill="#77ff99" stroke="#55dd77" cx="12.02" cy="-130" rx="12.04" ry="12.04"/><text text-anchor="start" x="8.52" y="-128.5" font-family="Monospace" font-weight="bold" font-size="10.00">b</text></g><!-- a&#45;&gt;b --><g id="edge2" class="edge"><title>a&#45;&gt;b</title><path fill="none" stroke="#333333" d="M12.02,-167.87C12.02,-162.29 12.02,-155.41 12.02,-149.1"/><polygon fill="#333333" stroke="#333333" points="14.47,-149.07 12.02,-142.07 9.57,-149.07 14.47,-149.07"/></g><!-- b_text --><g id="node3" class="node"><title>b_text</title><text text-anchor="start" x="31.52" y="-125" font-family="Monospace" font-size="25.00" fill="#333333">🛢️</text><text text-anchor="start" x="63.52" y="-125" font-family="Monospace" font-size="10.00" fill="#333333">  Create DB</text></g><!-- c --><g id="node6" class="node"><title>c</title><ellipse fill="#77ff99" stroke="#55dd77" cx="12.02" cy="-80" rx="12.04" ry="12.04"/><text text-anchor="start" x="8.52" y="-78.5" font-family="Monospace" font-weight="bold" font-size="10.00">c</text></g><!-- b&#45;&gt;c --><g id="edge3" class="edge"><title>b&#45;&gt;c</title><path fill="none" stroke="#333333" d="M12.02,-117.87C12.02,-112.29 12.02,-105.41 12.02,-99.1"/><polygon fill="#333333" stroke="#333333" points="14.47,-99.07 12.02,-92.07 9.57,-99.07 14.47,-99.07"/></g><!-- c_text --><g id="node5" class="node"><title>c_text</title><text text-anchor="start" x="31.52" y="-75" font-family="Monospace" font-size="25.00" fill="#333333">📥</text><text text-anchor="start" x="63.52" y="-75" font-family="Monospace" font-size="10.00" fill="#333333">  Download App</text></g><!-- d --><g id="node8" class="node"><title>d</title><ellipse fill="#ff9977" stroke="#dd7755" cx="12.02" cy="-22" rx="12.04" ry="12.04"/><text text-anchor="start" x="8.52" y="-20.5" font-family="Monospace" font-weight="bold" font-size="10.00">d</text></g><!-- c&#45;&gt;d --><g id="edge4" class="edge"><title>c&#45;&gt;d</title><path fill="none" stroke="#333333" d="M12.02,-67.94C12.02,-60.34 12.02,-50.09 12.02,-41.29"/><polygon fill="#333333" stroke="#333333" points="14.47,-41.04 12.02,-34.04 9.57,-41.04 14.47,-41.04"/></g><!-- d_text --><g id="node7" class="node"><title>d_text</title><text text-anchor="start" x="31.52" y="-17" font-family="Monospace" font-size="25.00" fill="#333333">🔌</text><text text-anchor="start" x="63.52" y="-17" font-family="Monospace" font-size="10.00" fill="#333333">  Link App to DB</text></g><!-- person --><g id="node9" class="node"><title>person</title><text text-anchor="start" x="169.02" y="-13.5" font-family="Helvetica,sans-Serif" font-size="30.00" fill="#333333">🧑</text><path fill="none" stroke="#333333" d="M214.02,-25C214.02,-25 248.02,-25 248.02,-25 251.02,-25 254.02,-28 254.02,-31 254.02,-31 254.02,-37 254.02,-37 254.02,-40 251.02,-43 248.02,-43 248.02,-43 214.02,-43 214.02,-43 211.02,-43 208.02,-40 208.02,-37 208.02,-37 208.02,-31 208.02,-31 208.02,-28 211.02,-25 214.02,-25"/><text text-anchor="start" x="210.02" y="-31.6" font-family="Helvetica,sans-Serif" font-style="italic" font-size="10.00" fill="#333333"></text><text text-anchor="start" x="214.02" y="-31.6" font-family="Helvetica,sans-Serif" font-style="italic" font-size="13.00" fill="#333333">O</text><text text-anchor="start" x="225.02" y="-31.6" font-family="Helvetica,sans-Serif" font-style="italic" font-size="11.00" fill="#333333">OPS </text><text text-anchor="start" x="229.02" y="-16" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#333333"></text><text text-anchor="start" x="229.02" y="-3" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#333333"></text></g></g></svg></div>
 </div>
 </details>
 <br/>
@@ -191,7 +175,9 @@
 <details>
 <summary><b>Planner:</b> The steps to completion are known, and progress is shown.</summary>
 <div style="margin-left: 18px;">
-<p><img src="state_visibility_progress_tracking_3.generated.svg" alt="" title="Progress Tracking" /></p>
+<div><!-- Generated by graphviz version 2.43.0 (0)
+ --><!-- Title: %3 Pages: 1 --><svg width="278pt" height="444pt"
+ viewBox="0.00 0.00 278.00 444.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 440)"><title>%3</title><g id="clust1" class="cluster"><title>cluster_a</title><polygon fill="transparent" stroke="black" stroke-width="0" points="8,-384 8,-428 161,-428 161,-384 8,-384"/></g><g id="clust3" class="cluster"><title>cluster_b</title><polygon fill="transparent" stroke="black" stroke-width="0" points="8,-332 8,-376 155,-376 155,-332 8,-332"/></g><g id="clust5" class="cluster"><title>cluster_c</title><polygon fill="transparent" stroke="black" stroke-width="0" points="8,-280 8,-324 173,-324 173,-280 8,-280"/></g><g id="clust9" class="cluster"><title>cluster_e</title><polygon fill="transparent" stroke="black" stroke-width="0" points="8,-164 8,-208 143,-208 143,-164 8,-164"/></g><g id="clust11" class="cluster"><title>cluster_f</title><polygon fill="transparent" stroke="black" stroke-width="0" points="8,-112 8,-156 191,-156 191,-112 8,-112"/></g><g id="clust13" class="cluster"><title>cluster_g</title><polygon fill="transparent" stroke="black" stroke-width="0" points="8,-60 8,-104 179,-104 179,-60 8,-60"/></g><g id="clust15" class="cluster"><title>cluster_h</title><polygon fill="transparent" stroke="black" stroke-width="0" points="8,-8 8,-52 203,-52 203,-8 8,-8"/></g><!-- a_text --><g id="node1" class="node"><title>a_text</title><text text-anchor="start" x="47.5" y="-401" font-family="Monospace" font-size="25.00" fill="#333333">📤</text><text text-anchor="start" x="79.5" y="-401" font-family="Monospace" font-size="10.00" fill="#333333">  Upload App</text></g><!-- a --><g id="node2" class="node"><title>a</title><ellipse fill="#ffff66" stroke="#cccc33" cx="28" cy="-406" rx="12.04" ry="12.04"/><text text-anchor="start" x="24.5" y="-404.5" font-family="Monospace" font-weight="bold" font-size="10.00">a</text></g><!-- b --><g id="node4" class="node"><title>b</title><ellipse fill="#77ff99" stroke="#55dd77" cx="28" cy="-354" rx="12.04" ry="12.04"/><text text-anchor="start" x="24.5" y="-352.5" font-family="Monospace" font-weight="bold" font-size="10.00">b</text></g><!-- a&#45;&gt;b --><g id="edge1" class="edge"><title>a&#45;&gt;b</title><path fill="none" stroke="#333333" d="M28,-393.9C28,-387.82 28,-380.12 28,-373.18"/><polygon fill="#333333" stroke="#333333" points="30.45,-373.07 28,-366.07 25.55,-373.07 30.45,-373.07"/></g><!-- b_text --><g id="node3" class="node"><title>b_text</title><text text-anchor="start" x="47.5" y="-349" font-family="Monospace" font-size="25.00" fill="#333333">🛢️</text><text text-anchor="start" x="79.5" y="-349" font-family="Monospace" font-size="10.00" fill="#333333">  Create DB</text></g><!-- c --><g id="node6" class="node"><title>c</title><ellipse fill="#77ff99" stroke="#55dd77" cx="28" cy="-302" rx="12.04" ry="12.04"/><text text-anchor="start" x="24.5" y="-300.5" font-family="Monospace" font-weight="bold" font-size="10.00">c</text></g><!-- b&#45;&gt;c --><g id="edge2" class="edge"><title>b&#45;&gt;c</title><path fill="none" stroke="#333333" d="M28,-341.9C28,-335.82 28,-328.12 28,-321.18"/><polygon fill="#333333" stroke="#333333" points="30.45,-321.07 28,-314.07 25.55,-321.07 30.45,-321.07"/></g><!-- c_text --><g id="node5" class="node"><title>c_text</title><text text-anchor="start" x="47.5" y="-297" font-family="Monospace" font-size="25.00" fill="#333333">📥</text><text text-anchor="start" x="79.5" y="-297" font-family="Monospace" font-size="10.00" fill="#333333">  Download App</text></g><!-- d --><g id="node8" class="node"><title>d</title><ellipse fill="#ff9977" stroke="#dd7755" cx="28" cy="-244" rx="12.04" ry="12.04"/><text text-anchor="start" x="24.5" y="-242.5" font-family="Monospace" font-weight="bold" font-size="10.00">d</text></g><!-- c&#45;&gt;d --><g id="edge3" class="edge"><title>c&#45;&gt;d</title><path fill="none" stroke="#333333" d="M28,-289.94C28,-282.34 28,-272.09 28,-263.29"/><polygon fill="#333333" stroke="#333333" points="30.45,-263.04 28,-256.04 25.55,-263.04 30.45,-263.04"/></g><!-- d_text --><g id="node7" class="node"><title>d_text</title><text text-anchor="start" x="47.5" y="-239" font-family="Monospace" font-size="25.00" fill="#333333">🔌</text><text text-anchor="start" x="79.5" y="-239" font-family="Monospace" font-size="10.00" fill="#333333">  Link App to DB</text></g><!-- e --><g id="node10" class="node"><title>e</title><ellipse fill="#eeeef5" stroke="#aaaabb" cx="28" cy="-186" rx="12.04" ry="12.04"/><text text-anchor="start" x="24.5" y="-184.5" font-family="Monospace" font-weight="bold" font-size="10.00">e</text></g><!-- d&#45;&gt;e --><g id="edge4" class="edge"><title>d&#45;&gt;e</title><path fill="none" stroke="#333333" d="M28,-231.94C28,-224.34 28,-214.09 28,-205.29"/><polygon fill="#333333" stroke="#333333" points="30.45,-205.04 28,-198.04 25.55,-205.04 30.45,-205.04"/></g><!-- e_text --><g id="node9" class="node"><title>e_text</title><text text-anchor="start" x="47.5" y="-181" font-family="Monospace" font-size="25.00" fill="#333333">💽</text><text text-anchor="start" x="79.5" y="-181" font-family="Monospace" font-size="10.00" fill="#333333">  Run App</text></g><!-- f --><g id="node12" class="node"><title>f</title><ellipse fill="#eeeef5" stroke="#aaaabb" cx="28" cy="-134" rx="12.04" ry="12.04"/><text text-anchor="start" x="24.5" y="-132.5" font-family="Monospace" font-weight="bold" font-size="10.00">f</text></g><!-- e&#45;&gt;f --><g id="edge5" class="edge"><title>e&#45;&gt;f</title><path fill="none" stroke="#333333" d="M28,-173.9C28,-167.82 28,-160.12 28,-153.18"/><polygon fill="#333333" stroke="#333333" points="30.45,-153.07 28,-146.07 25.55,-153.07 30.45,-153.07"/></g><!-- f_text --><g id="node11" class="node"><title>f_text</title><text text-anchor="start" x="47.5" y="-129" font-family="Monospace" font-size="25.00" fill="#333333">📫</text><text text-anchor="start" x="79.5" y="-129" font-family="Monospace" font-size="10.00" fill="#333333">  Allocate Domain</text></g><!-- g --><g id="node14" class="node"><title>g</title><ellipse fill="#eeeef5" stroke="#aaaabb" cx="28" cy="-82" rx="12.04" ry="12.04"/><text text-anchor="start" x="24.5" y="-80.5" font-family="Monospace" font-weight="bold" font-size="10.00">g</text></g><!-- f&#45;&gt;g --><g id="edge6" class="edge"><title>f&#45;&gt;g</title><path fill="none" stroke="#333333" d="M28,-121.9C28,-115.82 28,-108.12 28,-101.18"/><polygon fill="#333333" stroke="#333333" points="30.45,-101.07 28,-94.07 25.55,-101.07 30.45,-101.07"/></g><!-- g_text --><g id="node13" class="node"><title>g_text</title><text text-anchor="start" x="47.5" y="-77" font-family="Monospace" font-size="25.00" fill="#333333">📪</text><text text-anchor="start" x="79.5" y="-77" font-family="Monospace" font-size="10.00" fill="#333333">  Attach Domain</text></g><!-- h --><g id="node16" class="node"><title>h</title><ellipse fill="#eeeef5" stroke="#aaaabb" cx="28" cy="-30" rx="12.04" ry="12.04"/><text text-anchor="start" x="24.5" y="-28.5" font-family="Monospace" font-weight="bold" font-size="10.00">h</text></g><!-- g&#45;&gt;h --><g id="edge7" class="edge"><title>g&#45;&gt;h</title><path fill="none" stroke="#333333" d="M28,-69.9C28,-63.82 28,-56.12 28,-49.18"/><polygon fill="#333333" stroke="#333333" points="30.45,-49.07 28,-42.07 25.55,-49.07 30.45,-49.07"/></g><!-- h_text --><g id="node15" class="node"><title>h_text</title><text text-anchor="start" x="47.5" y="-25" font-family="Monospace" font-size="25.00" fill="#333333">📣</text><text text-anchor="start" x="79.5" y="-25" font-family="Monospace" font-size="10.00" fill="#333333">  Notify Completion</text></g><!-- person --><g id="node17" class="node"><title>person</title><text text-anchor="start" x="185" y="-235.5" font-family="Helvetica,sans-Serif" font-size="30.00" fill="#333333">🧑</text><path fill="none" stroke="#333333" d="M230,-247C230,-247 264,-247 264,-247 267,-247 270,-250 270,-253 270,-253 270,-259 270,-259 270,-262 267,-265 264,-265 264,-265 230,-265 230,-265 227,-265 224,-262 224,-259 224,-259 224,-253 224,-253 224,-250 227,-247 230,-247"/><text text-anchor="start" x="226" y="-253.6" font-family="Helvetica,sans-Serif" font-style="italic" font-size="10.00" fill="#333333"></text><text text-anchor="start" x="230" y="-253.6" font-family="Helvetica,sans-Serif" font-style="italic" font-size="13.00" fill="#333333">O</text><text text-anchor="start" x="241" y="-253.6" font-family="Helvetica,sans-Serif" font-style="italic" font-size="11.00" fill="#333333">OPS </text><text text-anchor="start" x="245" y="-238" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#333333"></text><text text-anchor="start" x="245" y="-225" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#333333"></text></g></g></svg></div>
 </div>
 </details>
 <h2 id="api-implications"><a class="header" href="#api-implications">API Implications</a></h2>
@@ -212,17 +198,13 @@
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                        
                             <a rel="prev" href="path_handling.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                        
 
-                        
                             <a rel="next" href="understandability.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
-                        
 
                         <div style="clear: both"></div>
                     </nav>
@@ -230,49 +212,35 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                
                     <a rel="prev" href="path_handling.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                
 
-                
                     <a rel="next" href="understandability.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
-                
             </nav>
 
         </div>
 
-        
 
-        
 
-        
 
-        
-        <script type="text/javascript">
+        <script>
             window.playground_copyable = true;
         </script>
-        
 
-        
 
-        
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
-        
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
 
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
 
         <!-- Custom JS scripts -->
-        
 
-        
 
     </body>
 </html>
